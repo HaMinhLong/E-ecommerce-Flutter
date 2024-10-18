@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portal_flutter/utils/colors.dart';
 import 'package:portal_flutter/widgets/big_text.dart';
+import 'package:portal_flutter/widgets/small_text.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({super.key});
@@ -22,14 +23,22 @@ class _MainFoodPageState extends State<MainFoodPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     BigText(
                       text: 'Vietnam',
                       color: AppColors.mainColor,
                       size: 30,
                     ),
-                    Text('City'),
+                    Row(
+                      children: [
+                        SmallText(
+                          text: 'City',
+                          color: Colors.black54,
+                        ),
+                        const Icon(Icons.arrow_drop_down_rounded)
+                      ],
+                    ),
                   ],
                 ),
                 Center(
